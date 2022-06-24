@@ -27,16 +27,17 @@ export default class UpdateProdutos extends Update{
           let validacao = true
 
           while (validacao) {
-            console.log("\n Selecione o que você deseja atualizar: \n");
+            console.log("\n Selecione uma opção para atualizar: \n");
             console.log(`--------------------------------------\n`);                    
             console.log("\n Dados para atualização: \n");
             console.log("[1] Nome do Produto");
             console.log("[2] Preço");
+            console.log("[0] Sair");
             console.log(`--------------------------------------\n`);
           }
 
         let entrada = new Entrada()
-        let opcao = entrada.receberNumero("Escolha o que deseja atualizar: ")
+        let opcao = entrada.receberNumero("Escolha uma opção: ")
         console.log("\n");
 
         switch (opcao) {

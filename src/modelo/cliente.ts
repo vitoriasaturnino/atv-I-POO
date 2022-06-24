@@ -7,15 +7,17 @@ import Telefone from "./telefone"
 export default class Cliente {
     public nome: string
     public nomeSocial: string
+    public genero: string
     private cpf: CPF
     private rgs: Array<RG>
     private dataCadastro: Date
     private telefones: Array<Telefone>
     private produtosConsumidos: Array<Produto>
     private servicosConsumidos: Array<Servico>
-    constructor(nome: string, nomeSocial: string, cpf: CPF) {
+    constructor(nome: string, nomeSocial: string, genero: string, cpf: CPF) {
         this.nome = nome
         this.nomeSocial = nomeSocial
+        this.genero = genero
         this.cpf = cpf
         this.rgs = []
         this.dataCadastro = new Date()
@@ -23,6 +25,7 @@ export default class Cliente {
         this.produtosConsumidos = []
         this.servicosConsumidos = []
     }
+    
     public get getCpf(): CPF {
         return this.cpf
     }
@@ -33,6 +36,13 @@ export default class Cliente {
         return this.dataCadastro
     }
     public get getTelefones(): Array<Telefone> {
+        return this.telefones
+    }
+    public removerTelefone(telefoneRemovido: Telefone): Array<Telefone>{
+        const telefoneAtualizado = this.getTelefones.filter(tel => {
+            tel.getDdd !==  telefoneRemovido.getDdd && tel.getNumero !== telefoneRemovido.getNumero
+        })
+        this.telefones = telefoneAtualizado;
         return this.telefones
     }
     public get getProdutosConsumidos(): Array<Produto> {

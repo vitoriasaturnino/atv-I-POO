@@ -1,7 +1,7 @@
 import Entrada from "../io/entrada";
 import Empresa from "../modelo/empresa"
-import CadastroCliente from "../negocio/cadastroCliente";
-import ListagemClientes from "../negocio/listagemClientes";
+import CadastroCliente from "../negocio/metodos_Clientes/CadastroCliente";
+import ListagemClientes from "../negocio/metodos_Clientes/ListagemClientes";
 
 console.log(`Bem-vindo ao cadastro de clientes do Grupo World Beauty`)
 let empresa = new Empresa()

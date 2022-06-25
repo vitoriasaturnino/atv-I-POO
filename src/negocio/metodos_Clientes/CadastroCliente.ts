@@ -20,7 +20,7 @@ export default class CadastroCliente extends Cadastro {
 
         let nome = this.entrada.receberTexto("Por favor informe o nome do cliente: ")
         let nomeSocial = this.entrada.receberTexto("Por favor informe o nome social do cliente: ")
-        let genero = this.entrada.receberTexto("Por favor informe o genero: (F/M)")
+        let genero = this.entrada.receberTexto("Por favor informe o genero: (F/M): ")
         let valor = this.entrada.receberTexto("Por favor informe o número do CPF: ");
         let data = this.entrada.receberTexto("Por favor informe a data de emissão do cpf: (dd/mm/yyyy) ");
         let valor_rg = this.entrada.receberTexto("Por favor informe o número do RG: ");

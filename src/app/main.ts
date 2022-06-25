@@ -11,12 +11,12 @@ let empresa = new Empresa()
 let execucao = true
 
 // Lista de clientes para teste
-// let mockClientes = new MockClientes(empresa.getClientes)
-// mockClientes.cadastrar();
+let mockClientes = new MockClientes(empresa.getClientes)
+mockClientes.cadastrar();
 
 while (execucao) {
     console.log("Opções:");
-    console.log("1 - Cadastrar cliente");
+    console.log("1 - Cliente");
     console.log("2 - Produtos");
     console.log("3 - Serviços");
     console.log("4 - Listas (atvi)");

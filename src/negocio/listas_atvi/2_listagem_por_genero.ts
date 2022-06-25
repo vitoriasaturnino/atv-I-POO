@@ -2,7 +2,7 @@ import Cliente from "../../modelo/cliente";
 import Listagem from "../listagem";
 
 
-export default class ListagemByGenero extends Listagem{
+export default class ListagemClientesGenero extends Listagem{
     private clientes:Array<Cliente>
     constructor(clientes: Array<Cliente>){
         super()

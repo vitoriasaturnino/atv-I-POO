@@ -3,7 +3,7 @@ import Produto from "../../modelo/produto";
 import Servico from "../../modelo/servico";
 import Listagem from "../listagem";
 
-export default class ListProdMostConsum extends Listagem{
+export default class ListaProdutosServicosMaisConsumidos extends Listagem{
     private clientes: Array<Cliente>
 
     constructor( clientes: Array<Cliente>){
